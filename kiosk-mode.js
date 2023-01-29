@@ -98,7 +98,6 @@ class KioskMode {
     const appToolbar = huiRoot.querySelector("app-toolbar");
     const overflowStyle = "ha-button-menu{display:none !important;}";
     const headerStyle = "#view{min-height:100vh !important;--header-height:0;}app-header{display:none;}";
-    const searchStyle = huiRoot.querySelector("app-toolbar > ha-icon-button").shadowRoot.querySelector("mwc-icon-button[title='Search'], mwc-icon-button[title='Rechercher']");
 
     if (this.hideHeader || this.hideOverflow) {
       this.addStyle(`${this.hideHeader ? headerStyle : ""}${this.hideOverflow ? overflowStyle : ""}`, huiRoot);
@@ -126,10 +125,10 @@ class KioskMode {
     }
     
     if (this.hideSearch) {
-      this.addStyle("ha-icon-button{display:none !important;}", appToolbar);
+      this.addStyle("app-toolbar > ha-icon-button:first-child{display:none !important;}", huiRoot);
       if (this.queryString("cache")) this.setCache("kmSearch", "true");
     } else {
-      this.removeStyle(appToolbar);
+      this.removeStyle(huiRoot);
     }
 
     // Resize window to "refresh" view.
