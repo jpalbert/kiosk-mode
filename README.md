@@ -1,6 +1,8 @@
 # kiosk-mode
 
-[![hacs_badge](https://img.shields.io/badge/HACS-Default-yellow.svg)](https://github.com/custom-components/hacs) [![hacs_badge](https://img.shields.io/badge/Buy-Me%20a%20Coffee-critical)](https://www.buymeacoffee.com/FgwNR2l)
+[![hacs_badge](https://img.shields.io/badge/HACS-Default-yellow.svg)](https://github.com/custom-components/hacs)
+
+<b>***This is a fork from https://github.com/maykar/kiosk-mode and I just added support to hide the search button in the top right corner.</b>
 
 Hides the header, sidebar drawer and/or the search button in [Home Assistant](https://www.home-assistant.io/)
 
