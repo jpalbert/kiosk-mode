@@ -202,6 +202,10 @@ The query string options are:
 * `?hide_search` to hide the top right search button
 * `?hide_menubutton` to hide sidebar menu button
 
+## Known bugs
+
+* The search buttom icon will reappear in the top right after you're done editing a dashboard, until you reload the page.
+
 ## Query String Caching
 
 You save settings in a devices cache by using the cache keyword once on the device.<br>This will also make it so the options work on all views and dashboards.
