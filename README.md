@@ -2,9 +2,10 @@
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Default-yellow.svg)](https://github.com/custom-components/hacs) [![hacs_badge](https://img.shields.io/badge/Buy-Me%20a%20Coffee-critical)](https://www.buymeacoffee.com/FgwNR2l)
 
-Hides the header and/or sidebar drawer in [Home Assistant](https://www.home-assistant.io/)
+Hides the header, sidebar drawer and/or the search button in [Home Assistant](https://www.home-assistant.io/)
 
 ![image](example1.png)
+![image](hide-search-example.png)
 
 # Installation
 
@@ -16,8 +17,9 @@ Hides the header and/or sidebar drawer in [Home Assistant](https://www.home-assi
   <summary><b>Installation and tracking with HACS</b></summary>
 <br>
 
-* In the "Frontend" section of [HACS](https://github.com/hacs/integration) hit the plus icon in the bottom right
-* Search for `Kiosk Mode` and install it
+* In the "Frontend" section of [HACS](https://github.com/hacs/integration) hit the 3 dots menu icon in the top right and then "Custom repositories"
+* Type "https://github.com/jpalbert/kiosk-mode" in Repository, select "Lovelace" under Category and click ADD
+* A new repository named "Kiosk Mode" will appear, click on it and then hit the Download button on the bottom right
 * If using YAML mode or if HACS doesn't automatically add it you'll need to add the resource below
 
 YAML mode users will add it to their [configuration.yaml](https://www.home-assistant.io/lovelace/dashboards-and-views/#adding-more-dashboards-with-yaml) file.
@@ -68,6 +70,7 @@ resources:
 |`hide_sidebar:` | Boolean | false | Hides only the sidebar. Disables swipe to open.
 |`hide_menubutton:` | Boolean | false | Hides only the sidebar menu icon. Does not disable swipe to open.
 |`hide_overflow:` | Boolean | false | Hides the top right menu.
+|`hide_search:` | Boolean | false | Hides the search button in the top right menu.
 |`ignore_entity_settings:` | Boolean | false | Useful for [conditional configs](#conditional-lovelace-config) and will cause `entity_settings` to be ignored.
 |`ignore_mobile_settings:` | Boolean | false | Useful for [conditional configs](#conditional-lovelace-config) and will cause `mobile_settings` to be ignored.
 
@@ -80,6 +83,17 @@ kiosk_mode:
 views:
 ```
 *Note: `views:` is added in the example above to show where `kiosk_mode:` should be placed in your Lovelace config*<br><br>
+
+![image](kiosk-mode-simple-example.png)
+
+## Hide Search Button example
+
+```
+kiosk_mode:
+  hide_search: true
+  
+views:
+```
 
 ## Conditional Lovelace Config
 Contitional configs take priority and if a condition matches all other config options/methods are ignored.
@@ -184,6 +198,7 @@ The query string options are:
 * `?hide_header` to hide only the header
 * `?hide_sidebar` to hide only the sidebar
 * `?hide_overflow` to hide the top right menu
+* `?hide_search` to hide the top right search button
 * `?hide_menubutton` to hide sidebar menu button
 
 ## Query String Caching
