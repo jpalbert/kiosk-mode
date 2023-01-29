@@ -5,7 +5,6 @@
 Hides the header, sidebar drawer and/or the search button in [Home Assistant](https://www.home-assistant.io/)
 
 ![image](example1.png)
-![image](hide-search-example.png)
 
 # Installation
 
