@@ -98,6 +98,7 @@ class KioskMode {
     const appToolbar = huiRoot.querySelector("app-toolbar");
     const overflowStyle = "ha-button-menu{display:none !important;}";
     const headerStyle = "#view{min-height:100vh !important;--header-height:0;}app-header{display:none;}";
+    const searchStyle = huiRoot.querySelector("app-toolbar > ha-icon-button").shadowRoot.querySelector("mwc-icon-button[title='Search'], mwc-icon-button[title='Rechercher']");
 
     if (this.hideHeader || this.hideOverflow) {
       this.addStyle(`${this.hideHeader ? headerStyle : ""}${this.hideOverflow ? overflowStyle : ""}`, huiRoot);
@@ -118,7 +119,7 @@ class KioskMode {
     }
 
     if (this.hideMenuButton) {
-      this.addStyle("ha-menu-button{display:none !important;}", appToolbar);
+      this.addStyle("mwc-icon-button[title='Search'], mwc-icon-button[title='Rechercher']{display:none !important;}", searchStyle);
       if (this.queryString("cache")) this.setCache("kmMenuButton", "true");
     } else {
       this.removeStyle(appToolbar);
