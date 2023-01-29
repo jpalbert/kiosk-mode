@@ -125,10 +125,10 @@ class KioskMode {
     }
     
     if (this.hideSearch) {
-      this.addStyle("app-toolbar > ha-icon-button:first-child{display:none !important;}", huiRoot);
+      this.addStyle("app-toolbar > ha-icon-button:first-child{display:none !important;}", appToolbar);
       if (this.queryString("cache")) this.setCache("kmSearch", "true");
     } else {
-      this.removeStyle(huiRoot);
+      this.removeStyle(appToolbar);
     }
 
     // Resize window to "refresh" view.
