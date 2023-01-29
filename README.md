@@ -81,7 +81,7 @@ kiosk_mode:
   
 views:
 ```
-*Note: `views:` is added in the example above to show where `kiosk_mode:` should be placed in your Lovelace config*<br><br>
+*Note: `views:` is added in the example above to show where `kiosk_mode:` should be placed in your Lovelace config*<br>
 
 ![image](kiosk-mode-simple-example.png)
 
