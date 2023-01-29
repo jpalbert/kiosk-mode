@@ -118,7 +118,7 @@ class KioskMode {
     }
 
     if (this.hideMenuButton) {
-      this.addStyle("mwc-icon-button[title='Search'], mwc-icon-button[title='Rechercher']{display:none !important;}", searchStyle);
+      this.addStyle("ha-menu-button{display:none !important;}", appToolbar);
       if (this.queryString("cache")) this.setCache("kmMenuButton", "true");
     } else {
       this.removeStyle(appToolbar);
