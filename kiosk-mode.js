@@ -144,6 +144,7 @@ class KioskMode {
   watchDashboards(mutations) {
     mutations.forEach(({ addedNodes }) => {
       for (let node of addedNodes) if (node.localName == "ha-panel-lovelace") window.KioskMode.run(node);
+      alert('update');
     });
   }
 
