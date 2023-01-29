@@ -11,6 +11,9 @@ class KioskMode {
     new MutationObserver(this.watchDashboards).observe(this.main.querySelector("partial-panel-resolver"), {
       childList: true,
     });
+    new MutationObserver(this.watchDashboards).observe(this.main.querySelector("partial-panel-resolver > ha-panel-lovelace").shadowRoot.querySelector("hui-root").shadowRoot.querySelector("app-header"), {
+      childList: true,
+    });
   }
 
   run(lovelace = this.main.querySelector("ha-panel-lovelace")) {
